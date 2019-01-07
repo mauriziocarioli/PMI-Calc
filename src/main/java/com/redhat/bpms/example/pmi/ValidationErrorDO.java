@@ -6,12 +6,24 @@ package com.redhat.bpms.example.pmi;
 
 public class ValidationErrorDO implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ValidationErrorDO() {
-    }
+	@org.kie.api.definition.type.Label(value = "message")
+	private java.lang.String msg;
 
+	public ValidationErrorDO() {
+	}
 
+	public java.lang.String getMsg() {
+		return this.msg;
+	}
 
+	public void setMsg(java.lang.String msg) {
+		this.msg = msg;
+	}
+
+	public ValidationErrorDO(java.lang.String msg) {
+		this.msg = msg;
+	}
 
 }
