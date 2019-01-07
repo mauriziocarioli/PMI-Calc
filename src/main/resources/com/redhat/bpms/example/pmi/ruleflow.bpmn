@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmn20="http://www.omg.org/bpmn20" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns="http://www.jboss.org/drools" xmlns:ns="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" id="_1My1QPQbEei_RMnUsxDl-g" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.4.3.Final-v20180418-1358-B1" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_applicationItem" isCollection="false" structureRef="com.redhat.bpms.example.pmi.MortgageApplication"/>
+  <bpmn2:itemDefinition id="__24293E96-487A-435B-B833-BE634914B368_mortgageInputXItem" isCollection="false" structureRef="com.redhat.bpms.example.pmi.MortgageApplication"/>
+  <bpmn2:itemDefinition id="__24293E96-487A-435B-B833-BE634914B368_mortgageOutputXItem" isCollection="false" structureRef="com.redhat.bpms.example.pmi.MortgageApplication"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_ConnectTimeoutInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_ContentDataInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_MethodInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_PasswordInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_ReadTimeoutInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_UrlInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_UsernameInputXItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="__AE04BEDA-447E-45AD-91D5-149C3A227AB4_ResultOutputXItem" isCollection="false" structureRef="java.lang.Object"/>
+  <bpmn2:itemDefinition id="__48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageInputXItem" isCollection="false" structureRef="com.redhat.bpms.example.pmi.MortgageApplication"/>
+  <bpmn2:itemDefinition id="__48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageOutputXItem" isCollection="false" structureRef="com.redhat.bpms.example.pmi.MortgageApplication"/>
+  <bpmn2:process id="PMI.ruleflow" drools:packageName="com.redhat.bpms.example.pmi" drools:version="1.0" drools:adHoc="false" name="ruleflow" isExecutable="true">
+    <bpmn2:property id="application" itemSubjectRef="_applicationItem" name="application"/>
+    <bpmn2:sequenceFlow id="_8D187E8B-6FD7-4C90-A649-AA4F7AFF286E" sourceRef="_48C94B14-0E7A-4EFB-B91D-E81F20C27152" targetRef="BusinessRuleTask_1"/>
+    <bpmn2:sequenceFlow id="_64F88F5F-AC44-4777-8E25-DF071B343347" sourceRef="_109F5035-2E4D-4CF3-8A79-8F9723BA79D3" targetRef="_48C94B14-0E7A-4EFB-B91D-E81F20C27152"/>
+    <bpmn2:sequenceFlow id="_B6575DDE-8BB6-41B1-963F-BDD64CF61DA5" sourceRef="_24293E96-487A-435B-B833-BE634914B368" targetRef="_280E3DCC-6274-479E-BF9B-3F082C6BCA58"/>
+    <bpmn2:endEvent id="_280E3DCC-6274-479E-BF9B-3F082C6BCA58">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_B6575DDE-8BB6-41B1-963F-BDD64CF61DA5</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:businessRuleTask id="_48C94B14-0E7A-4EFB-B91D-E81F20C27152" drools:ruleFlowGroup="initialization" name="Initialize">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Initialize]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_64F88F5F-AC44-4777-8E25-DF071B343347</bpmn2:incoming>
+      <bpmn2:outgoing>_8D187E8B-6FD7-4C90-A649-AA4F7AFF286E</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_1My1SPQbEei_RMnUsxDl-g">
+        <bpmn2:dataInput id="_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageInputX" drools:dtype="com.redhat.bpms.example.pmi.MortgageApplication" itemSubjectRef="__48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageInputXItem" name="mortgage"/>
+        <bpmn2:dataOutput id="_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageOutputX" drools:dtype="com.redhat.bpms.example.pmi.MortgageApplication" itemSubjectRef="__48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageOutputXItem" name="mortgage"/>
+        <bpmn2:inputSet id="_1My1SfQbEei_RMnUsxDl-g">
+          <bpmn2:dataInputRefs>_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_1My1SvQbEei_RMnUsxDl-g">
+          <bpmn2:dataOutputRefs>_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_1My1S_QbEei_RMnUsxDl-g">
+        <bpmn2:sourceRef>application</bpmn2:sourceRef>
+        <bpmn2:targetRef>_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_1My1TPQbEei_RMnUsxDl-g">
+        <bpmn2:sourceRef>_48C94B14-0E7A-4EFB-B91D-E81F20C27152_mortgageOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>application</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:businessRuleTask>
+    <bpmn2:startEvent id="_109F5035-2E4D-4CF3-8A79-8F9723BA79D3">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_64F88F5F-AC44-4777-8E25-DF071B343347</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:businessRuleTask id="_24293E96-487A-435B-B833-BE634914B368" drools:ruleFlowGroup="calculation" name="Calculate PMI">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Calculate PMI]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+      <bpmn2:outgoing>_B6575DDE-8BB6-41B1-963F-BDD64CF61DA5</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_1MzcUvQbEei_RMnUsxDl-g">
+        <bpmn2:dataInput id="_24293E96-487A-435B-B833-BE634914B368_mortgageInputX" drools:dtype="com.redhat.bpms.example.pmi.MortgageApplication" itemSubjectRef="__24293E96-487A-435B-B833-BE634914B368_mortgageInputXItem" name="mortgage"/>
+        <bpmn2:dataOutput id="_24293E96-487A-435B-B833-BE634914B368_mortgageOutputX" drools:dtype="com.redhat.bpms.example.pmi.MortgageApplication" itemSubjectRef="__24293E96-487A-435B-B833-BE634914B368_mortgageOutputXItem" name="mortgage"/>
+        <bpmn2:inputSet id="_1MzcU_QbEei_RMnUsxDl-g">
+          <bpmn2:dataInputRefs>_24293E96-487A-435B-B833-BE634914B368_mortgageInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_1MzcVPQbEei_RMnUsxDl-g">
+          <bpmn2:dataOutputRefs>_24293E96-487A-435B-B833-BE634914B368_mortgageOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_1MzcVfQbEei_RMnUsxDl-g">
+        <bpmn2:sourceRef>application</bpmn2:sourceRef>
+        <bpmn2:targetRef>_24293E96-487A-435B-B833-BE634914B368_mortgageInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_1MzcVvQbEei_RMnUsxDl-g">
+        <bpmn2:sourceRef>_24293E96-487A-435B-B833-BE634914B368_mortgageOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>application</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:businessRuleTask>
+    <bpmn2:businessRuleTask id="BusinessRuleTask_1" drools:ruleFlowGroup="validation" name="Validate">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Validate]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_8D187E8B-6FD7-4C90-A649-AA4F7AFF286E</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" drools:priority="1" sourceRef="BusinessRuleTask_1" targetRef="_24293E96-487A-435B-B833-BE634914B368"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_1MzcV_QbEei_RMnUsxDl-g">
+    <bpmndi:BPMNPlane id="_1MzcWPQbEei_RMnUsxDl-g" bpmnElement="PMI.ruleflow">
+      <bpmndi:BPMNShape id="shape__24293E96-487A-435B-B833-BE634914B368" bpmnElement="_24293E96-487A-435B-B833-BE634914B368">
+        <dc:Bounds height="102.0" width="154.0" x="673.0" y="79.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="11.0" width="57.0" x="721.0" y="124.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__109F5035-2E4D-4CF3-8A79-8F9723BA79D3" bpmnElement="_109F5035-2E4D-4CF3-8A79-8F9723BA79D3">
+        <dc:Bounds height="56.0" width="56.0" x="100.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__48C94B14-0E7A-4EFB-B91D-E81F20C27152" bpmnElement="_48C94B14-0E7A-4EFB-B91D-E81F20C27152">
+        <dc:Bounds height="102.0" width="154.0" x="236.0" y="77.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="11.0" width="33.0" x="296.0" y="122.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__280E3DCC-6274-479E-BF9B-3F082C6BCA58" bpmnElement="_280E3DCC-6274-479E-BF9B-3F082C6BCA58">
+        <dc:Bounds height="56.0" width="56.0" x="906.0" y="102.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_BusinessRuleTask_1" bpmnElement="BusinessRuleTask_1" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="480.0" y="103.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="11.0" width="32.0" x="519.0" y="122.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__24293E96-487A-435B-B833-BE634914B368_to_shape__280E3DCC-6274-479E-BF9B-3F082C6BCA58" bpmnElement="_B6575DDE-8BB6-41B1-963F-BDD64CF61DA5" sourceElement="shape__24293E96-487A-435B-B833-BE634914B368" targetElement="shape__280E3DCC-6274-479E-BF9B-3F082C6BCA58">
+        <di:waypoint xsi:type="dc:Point" x="827.0" y="130.0"/>
+        <di:waypoint xsi:type="dc:Point" x="866.0" y="130.0"/>
+        <di:waypoint xsi:type="dc:Point" x="906.0" y="130.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__109F5035-2E4D-4CF3-8A79-8F9723BA79D3_to_shape__48C94B14-0E7A-4EFB-B91D-E81F20C27152" bpmnElement="_64F88F5F-AC44-4777-8E25-DF071B343347" sourceElement="shape__109F5035-2E4D-4CF3-8A79-8F9723BA79D3" targetElement="shape__48C94B14-0E7A-4EFB-B91D-E81F20C27152">
+        <di:waypoint xsi:type="dc:Point" x="156.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="236.0" y="128.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__48C94B14-0E7A-4EFB-B91D-E81F20C27152_to_shape__AE04BEDA-447E-45AD-91D5-149C3A227AB4" bpmnElement="_8D187E8B-6FD7-4C90-A649-AA4F7AFF286E" sourceElement="shape__48C94B14-0E7A-4EFB-B91D-E81F20C27152" targetElement="BPMNShape_BusinessRuleTask_1">
+        <di:waypoint xsi:type="dc:Point" x="390.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="435.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="480.0" y="128.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_8"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_BusinessRuleTask_1" targetElement="shape__24293E96-487A-435B-B833-BE634914B368">
+        <di:waypoint xsi:type="dc:Point" x="590.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="631.0" y="128.0"/>
+        <di:waypoint xsi:type="dc:Point" x="631.0" y="130.0"/>
+        <di:waypoint xsi:type="dc:Point" x="673.0" y="130.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
