@@ -12,7 +12,7 @@ import java.lang.Double;
 @org.kie.api.definition.type.Label("mortgage application")
 public class MortgageApplication implements Serializable {
 
-	static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 4742262090234788515L;
 
 	@org.kie.api.definition.type.Label("id")
 	private String id;

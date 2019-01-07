@@ -11,7 +11,7 @@ import java.lang.Integer;
 @org.kie.api.definition.type.Label("property")
 public class Property implements Serializable {
 
-	static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -6246307840321746704L;
 
 	@org.kie.api.definition.type.Label("price")
 	private Integer price;

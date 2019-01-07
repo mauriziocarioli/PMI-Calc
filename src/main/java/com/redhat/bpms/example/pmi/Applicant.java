@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 public class Applicant implements Serializable {
 
-	static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -6802443485036869625L;
 
 	@org.kie.api.definition.type.Label(value = "SSN")
 	private String ssn;
