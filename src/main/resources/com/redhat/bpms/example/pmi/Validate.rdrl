@@ -1,0 +1,13 @@
+package com.redhat.bpms.example.pmi;
+
+import java.lang.Number;
+
+rule "Validate"
+	@governance(defined)
+	dialect "mvel"
+	ruleflow-group "initialization"
+	when
+		mortgage : MortgageApplication( loan : baseLoanAmount > 0 , property : property != null , value : property.price > 0 )
+	then
+		mortgage.setLtv( loan/value );
+end
