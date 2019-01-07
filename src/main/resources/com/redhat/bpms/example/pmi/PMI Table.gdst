@@ -90,7 +90,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>baseLoanAmount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&gt;=</operator>
+          <operator>&gt;</operator>
           <parameters/>
           <binding></binding>
         </condition-column52>
@@ -106,7 +106,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>baseLoanAmount</factField>
           <fieldType>Integer</fieldType>
-          <operator>&lt;</operator>
+          <operator>&lt;=</operator>
           <valueList></valueList>
           <parameters/>
           <binding></binding>
@@ -123,7 +123,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>ltv</factField>
           <fieldType>Double</fieldType>
-          <operator>&gt;=</operator>
+          <operator>&gt;</operator>
           <parameters/>
           <binding></binding>
         </condition-column52>
@@ -139,7 +139,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>ltv</factField>
           <fieldType>Double</fieldType>
-          <operator>&lt;</operator>
+          <operator>&lt;=</operator>
           <valueList></valueList>
           <parameters/>
           <binding></binding>
