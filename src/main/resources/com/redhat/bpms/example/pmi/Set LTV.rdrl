@@ -7,7 +7,7 @@ rule "Set LTV"
 	dialect "mvel"
 	ruleflow-group "initialization"
 	when
-		mortgage : MortgageApplication( property : property, price : property.price, loan : baseLoanAmount)
+		mortgage : MortgageApplication( property : property, value : property.price, loan : baseLoanAmount)
 	then
 		mortgage.setLtv( loan/value );
 end
