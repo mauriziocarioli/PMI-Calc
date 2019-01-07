@@ -7,7 +7,9 @@ rule "Validate"
 	dialect "mvel"
 	ruleflow-group "initialization"
 	when
-		mortgage : MortgageApplication( loan : baseLoanAmount > 0 , property : property != null , value : property.price > 0 )
+		MortgageApplication( lengthOfLoanYears <= 0 || baseLoanAmount <= 0 || ltv <= 0.0 || program == null || property == null )
 	then
-		mortgage.setLtv( loan/value );
+		ValidationErrorDO fact0 = new ValidationErrorDO();
+		fact0.setMsg( "input data is invalid" );
+		insert( fact0 );
 end
