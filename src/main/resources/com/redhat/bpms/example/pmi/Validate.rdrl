@@ -3,9 +3,8 @@ package com.redhat.bpms.example.pmi;
 import java.lang.Number;
 
 rule "Validate"
-	@governance(defined)
 	dialect "mvel"
-	ruleflow-group "validation"
+	salience 10
 	when
 		MortgageApplication( lengthOfLoanYears <= 0 || baseLoanAmount <= 0 || ltv <= 0.0 || program == null || property == null )
 	then
