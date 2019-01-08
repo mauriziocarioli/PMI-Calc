@@ -3,9 +3,8 @@ package com.redhat.bpms.example.pmi;
 import java.lang.Number;
 
 rule "Set LTV"
-	@governance(defined)
 	dialect "mvel"
-	ruleflow-group "initialization"
+	salience 5
 	when
 		mortgage : MortgageApplication( property : property, value : property.price, loan : baseLoanAmount)
 	then
