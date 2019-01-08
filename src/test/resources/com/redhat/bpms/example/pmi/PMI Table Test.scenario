@@ -34,12 +34,6 @@
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>ltv</fieldName>
-          <expected>0.8</expected>
-          <operator>==</operator>
-          <nature>1</nature>
-        </expect-field>
-        <expect-field>
           <fieldName>annualMIP</fieldName>
           <expected>45</expected>
           <operator>==</operator>
