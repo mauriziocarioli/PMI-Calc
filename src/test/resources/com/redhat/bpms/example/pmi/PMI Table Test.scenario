@@ -34,6 +34,19 @@
           <value>160000</value>
           <nature>4</nature>
         </field-data>
+        <field-data>
+          <fieldName>applicant</fieldName>
+          <fact>
+            <type>Applicant</type>
+            <fieldData>
+              <field-data>
+                <name>creditScore</name>
+                <value>700</value>
+                <nature>4</nature>
+              </field-data>
+            </fieldData>
+          </fact>
+        </field-data>
       </fieldData>
       <name>application</name>
       <isModify>false</isModify>
@@ -51,12 +64,20 @@
           <fieldName>annualMIP</fieldName>
           <expected>45</expected>
           <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
       <name>application</name>
       <anonymous>false</anonymous>
     </expect-fact>
+    <expect-rule>
+      <ruleName>Set LTV</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
+    <expect-rule>
+      <ruleName>Row 1 PMI Table</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
