@@ -9,20 +9,7 @@
     <width>150</width>
   </descriptionCol>
   <metadataCols/>
-  <attributeCols>
-    <attribute-column52>
-      <typedDefaultValue>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </typedDefaultValue>
-      <hideColumn>false</hideColumn>
-      <width>100</width>
-      <attribute>ruleflow-group</attribute>
-      <reverseOrder>false</reverseOrder>
-      <useRowNumber>false</useRowNumber>
-    </attribute-column52>
-  </attributeCols>
+  <attributeCols/>
   <conditionPatterns>
     <Pattern52>
       <factType>MortgageApplication</factType>
@@ -214,11 +201,6 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>FHA</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -272,11 +254,6 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>calculation</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -338,11 +315,6 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>FHA</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -396,11 +368,6 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>calculation</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -463,11 +430,6 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>FHA</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -521,11 +483,6 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>calculation</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -587,11 +544,6 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>FHA</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -649,11 +601,6 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>calculation</valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
         <valueString>FHA</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
@@ -707,11 +654,6 @@
       </value>
       <value>
         <valueString></valueString>
-        <dataType>STRING</dataType>
-        <isOtherwise>false</isOtherwise>
-      </value>
-      <value>
-        <valueString>calculation</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
