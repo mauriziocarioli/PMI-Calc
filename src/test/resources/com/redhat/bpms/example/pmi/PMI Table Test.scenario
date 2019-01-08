@@ -55,6 +55,6 @@
     <imports/>
   </imports>
   <ksessions>
-    <string>pmi-stateless-session</string>
+    <string>pmi-stateful-session</string>
   </ksessions>
 </scenario>
