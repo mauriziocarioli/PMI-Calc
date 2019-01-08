@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.redhat.bpms.example.pmi</groupId>
   <artifactId>PMI-Calc</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.3-SNAPSHOT</version>
   <packaging>kjar</packaging>
   <name>PMI-Calc</name>
   <description></description>
