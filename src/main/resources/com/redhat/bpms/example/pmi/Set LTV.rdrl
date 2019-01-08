@@ -9,5 +9,4 @@ rule "Set LTV"
 		mortgage : MortgageApplication( property : property, value : property.price, loan : baseLoanAmount)
 	then
 		mortgage.setLtv( loan/value );
-		System.out.println(">>>>> firing "+drools.getRule().getName());
 end
