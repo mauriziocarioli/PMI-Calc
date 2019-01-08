@@ -7,19 +7,6 @@
       <type>MortgageApplication</type>
       <fieldData>
         <field-data>
-          <fieldName>property</fieldName>
-          <fact>
-            <type>Property</type>
-            <fieldData>
-              <field-data>
-                <name>price</name>
-                <value>200000</value>
-                <nature>4</nature>
-              </field-data>
-            </fieldData>
-          </fact>
-        </field-data>
-        <field-data>
           <name>program</name>
           <value>FHA</value>
           <nature>4</nature>
@@ -35,17 +22,9 @@
           <nature>4</nature>
         </field-data>
         <field-data>
-          <fieldName>applicant</fieldName>
-          <fact>
-            <type>Applicant</type>
-            <fieldData>
-              <field-data>
-                <name>creditScore</name>
-                <value>700</value>
-                <nature>4</nature>
-              </field-data>
-            </fieldData>
-          </fact>
+          <name>ltv</name>
+          <value>0.8</value>
+          <nature>4</nature>
         </field-data>
       </fieldData>
       <name>application</name>
@@ -70,10 +49,6 @@
       <name>application</name>
       <anonymous>false</anonymous>
     </expect-fact>
-    <expect-rule>
-      <ruleName>Set LTV</ruleName>
-      <expectedFire>true</expectedFire>
-    </expect-rule>
     <expect-rule>
       <ruleName>Row 1 PMI Table</ruleName>
       <expectedFire>true</expectedFire>
