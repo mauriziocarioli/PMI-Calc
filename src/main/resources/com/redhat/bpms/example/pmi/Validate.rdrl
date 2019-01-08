@@ -11,5 +11,4 @@ rule "Validate"
 		ValidationErrorDO fact0 = new ValidationErrorDO();
 		fact0.setMsg( "input data is invalid" );
 		insert( fact0 );
-		System.out.println(">>>>> firing "+drools.getRule().getName());
 end
