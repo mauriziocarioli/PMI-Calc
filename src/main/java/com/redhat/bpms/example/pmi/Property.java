@@ -14,21 +14,13 @@ public class Property implements Serializable {
 	private static final long serialVersionUID = -6246307840321746704L;
 
 	@org.kie.api.definition.type.Label("price")
-	private Integer price;
+	private Double price;
 	@org.kie.api.definition.type.Label("address")
 	private String address;
-	@org.kie.api.definition.type.Label(value = "id")
+	@org.kie.api.definition.type.Label("id")
 	private String id;
 
 	public Property() {
-	}
-
-	public Integer getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(Integer price) {
-		this.price = price;
 	}
 
 	public String getAddress() {
@@ -47,8 +39,16 @@ public class Property implements Serializable {
 		this.id = id;
 	}
 
-	public Property(Integer price, String address,
-			String id) {
+	public java.lang.Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(java.lang.Double price) {
+		this.price = price;
+	}
+
+	public Property(java.lang.Double price, java.lang.String address,
+			java.lang.String id) {
 		this.price = price;
 		this.address = address;
 		this.id = id;
