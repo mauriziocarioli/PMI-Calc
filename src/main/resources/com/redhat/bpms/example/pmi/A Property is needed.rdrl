@@ -6,10 +6,10 @@ rule "A Property is needed"
 	dialect "mvel"
 	salience 10
 	when
-		MortgageApplication( lengthOfLoanYears <= 0 || baseLoanAmount <= 0 || program == null || property == null )
+		MortgageApplication( property == null )
 	then
 		ValidationErrorDO fact0 = new ValidationErrorDO();
-		fact0.setMsg( "input data is invalid" );
+		fact0.setMsg( "the property is missing" );
 		insert( fact0 );
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>> firing "+drools.getRule().getName())
 end
