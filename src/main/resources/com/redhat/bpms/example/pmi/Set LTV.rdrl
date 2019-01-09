@@ -8,5 +8,7 @@ rule "Set LTV"
 	when
 		mortgage : MortgageApplication( property : property, value : property.price, loan : baseLoanAmount)
 	then
-		mortgage.setLtv( loan/value );
+		modify( mortgage ) {
+				setLtv( loan/value )
+		}
 end
