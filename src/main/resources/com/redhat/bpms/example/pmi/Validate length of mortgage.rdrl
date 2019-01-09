@@ -6,10 +6,10 @@ rule "Validate length of mortgage"
 	dialect "mvel"
 	salience 10
 	when
-		MortgageApplication( lengthOfLoanYears <= 0 || baseLoanAmount <= 0 || program == null || property == null )
+		MortgageApplication( lengthOfLoanYears <= 0 || lengthOfLoanYears == null )
 	then
 		ValidationErrorDO fact0 = new ValidationErrorDO();
-		fact0.setMsg( "input data is invalid" );
+		fact0.setMsg( "the mortgage amortization period must be provided and be greater than 0" );
 		insert( fact0 );
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>> firing "+drools.getRule().getName())
 end
