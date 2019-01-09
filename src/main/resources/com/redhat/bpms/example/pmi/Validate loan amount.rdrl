@@ -6,7 +6,7 @@ rule "Validate loan amount"
 	dialect "mvel"
 	salience 10
 	when
-		MortgageApplication( baseLoanAmount <= 0 || baseLoanAmount != null )
+		MortgageApplication( baseLoanAmount <= 0 || baseLoanAmount == null )
 	then
 		ValidationErrorDO fact0 = new ValidationErrorDO();
 		fact0.setMsg( "the loan amount must exist and be larger than 0" );
