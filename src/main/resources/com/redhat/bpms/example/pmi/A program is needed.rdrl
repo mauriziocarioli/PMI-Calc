@@ -1,0 +1,15 @@
+package com.redhat.bpms.example.pmi;
+
+import java.lang.Number;
+
+rule "A program is needed"
+	dialect "mvel"
+	salience 10
+	when
+		MortgageApplication( lengthOfLoanYears <= 0 || baseLoanAmount <= 0 || program == null || property == null )
+	then
+		ValidationErrorDO fact0 = new ValidationErrorDO();
+		fact0.setMsg( "input data is invalid" );
+		insert( fact0 );
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>> firing "+drools.getRule().getName())
+end
