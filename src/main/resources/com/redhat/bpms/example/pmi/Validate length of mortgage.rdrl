@@ -2,7 +2,7 @@ package com.redhat.bpms.example.pmi;
 
 import java.lang.Number;
 
-rule "Validate"
+rule "Validate length of mortgage"
 	dialect "mvel"
 	salience 10
 	when
