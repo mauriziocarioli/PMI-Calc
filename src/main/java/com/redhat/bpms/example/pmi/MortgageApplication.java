@@ -19,9 +19,9 @@ public class MortgageApplication implements Serializable {
 	@org.kie.api.definition.type.Label("length of loan (years)")
 	private Integer lengthOfLoanYears;
 	@org.kie.api.definition.type.Label("base loan amount")
-	private Integer baseLoanAmount;
+	private Double baseLoanAmount;
 	@org.kie.api.definition.type.Label("down payment")
-	private Integer downpayment;
+	private Double downpayment;
 	@org.kie.api.definition.type.Label("annual MIP (bps)")
 	private Integer annualMIP;
 	@org.kie.api.definition.type.Label("program")
@@ -32,18 +32,10 @@ public class MortgageApplication implements Serializable {
 	private Double ltv;
 	@org.kie.api.definition.type.Label("APR")
 	private Double apr;
-	@org.kie.api.definition.type.Label(value = "applicant")
+	@org.kie.api.definition.type.Label("applicant")
 	private com.redhat.bpms.example.pmi.Applicant applicant;
 
 	public MortgageApplication() {
-	}
-
-	public Integer getBaseLoanAmount() {
-		return this.baseLoanAmount;
-	}
-
-	public void setBaseLoanAmount(Integer baseLoanAmount) {
-		this.baseLoanAmount = baseLoanAmount;
 	}
 
 	public Integer getAnnualMIP() {
@@ -60,14 +52,6 @@ public class MortgageApplication implements Serializable {
 
 	public void setLengthOfLoanYears(Integer lengthOfLoanYears) {
 		this.lengthOfLoanYears = lengthOfLoanYears;
-	}
-
-	public Integer getDownpayment() {
-		return this.downpayment;
-	}
-
-	public void setDownpayment(Integer downpayment) {
-		this.downpayment = downpayment;
 	}
 
 	public String getId() {
@@ -118,12 +102,29 @@ public class MortgageApplication implements Serializable {
 		this.applicant = applicant;
 	}
 
-	public MortgageApplication(String id,
-			Integer lengthOfLoanYears,
-			Integer baseLoanAmount, Integer downpayment,
-			Integer annualMIP, String program,
-			com.redhat.bpms.example.pmi.Property property, Double ltv,
-			Double apr, com.redhat.bpms.example.pmi.Applicant applicant) {
+	public java.lang.Double getBaseLoanAmount() {
+		return this.baseLoanAmount;
+	}
+
+	public void setBaseLoanAmount(java.lang.Double baseLoanAmount) {
+		this.baseLoanAmount = baseLoanAmount;
+	}
+
+	public java.lang.Double getDownpayment() {
+		return this.downpayment;
+	}
+
+	public void setDownpayment(java.lang.Double downpayment) {
+		this.downpayment = downpayment;
+	}
+
+	public MortgageApplication(java.lang.String id,
+			java.lang.Integer lengthOfLoanYears,
+			java.lang.Double baseLoanAmount, java.lang.Double downpayment,
+			java.lang.Integer annualMIP, java.lang.String program,
+			com.redhat.bpms.example.pmi.Property property,
+			java.lang.Double ltv, java.lang.Double apr,
+			com.redhat.bpms.example.pmi.Applicant applicant) {
 		this.id = id;
 		this.lengthOfLoanYears = lengthOfLoanYears;
 		this.baseLoanAmount = baseLoanAmount;
