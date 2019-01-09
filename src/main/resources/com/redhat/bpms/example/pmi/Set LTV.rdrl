@@ -11,4 +11,5 @@ rule "Set LTV"
 		modify( mortgage ) {
 				setLtv( loan/value )
 		}
+		System.out.println(">>>>>>>>>>>>>>>>>>>>> firing "+drools.getRule().getName());
 end
