@@ -1,0 +1,97 @@
+PMI Calculation Service - An example Decision Service
+-----------------------------------------------------
+
+
+Example service call (with curl):
+[source,bash]
+-----------------
+curl -X POST "http://localhost:8080/kie-server/services/rest/server/containers/instances/PMI-Calc_1.0.0-SNAPSHOT" -H "accept: application/xml" -H "content-type: application/json" -d "{ \"lookup\": \"pmi-stateless-session\", \"commands\": [ { \"insert\": { \"object\": { \"com.redhat.bpms.example.pmi.MortgageApplication\": { \"id\": \"1234567890\", \"lengthOfLoanYears\": 15, \"baseLoanAmount\": 160000, \"downpayment\": 40000, \"annualMIP\": -1, \"program\": \"FHA\", \"property\": { \"id\": \"457835\", \"address\": \"Sunny Road 7\", \"price\": 200000 }, \"ltv\": 0, \"apr\": 4.5, \"applicant\": { \"creditScore\": 740, \"name\": \"Jim\", \"ssn\": \"123-456-7890\" } } }, \"out-identifier\": \"application\", \"return-object\": true } }, { \"fire-all-rules\": {} }, { \"dispose\": {} } ]}"
+-----------------
+
+If you are using Postman or SoapUI this is a sample payload to put in the body of the request:
+[source,json]
+-----------------
+{
+    "lookup": "pmi-stateless-session",
+    "commands": [
+        {
+            "insert": {
+                "object": {
+                    "com.redhat.bpms.example.pmi.MortgageApplication": {
+                        "id": "1234567890",
+                        "lengthOfLoanYears": 15,
+                        "baseLoanAmount": 160000,
+                        "downpayment": 40000,
+                        "annualMIP": -1,
+                        "program": "FHA",
+                        "property": {
+                            "id": "457835",
+                            "address": "Sunny Road 7",
+                            "price": 200000
+                        },
+                        "ltv": 0,
+                        "apr": 4.5,
+                        "applicant": {
+                            "creditScore": 740,
+                            "name": "Jim",
+                            "ssn": "123-456-7890"
+                        }
+                    }
+                },
+                "out-identifier": "application",
+                "return-object": true
+            }
+        },
+        {
+            "fire-all-rules": {}
+        },
+        {
+            "dispose": {}
+        }
+    ]
+}
+-----------------
+
+You can try the following tests with Postman:
+[source,javascript]
+-----------------
+pm.test("Response is valid", function () {
+    
+     // assert that the status code is 200
+     pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants
+     // assert that the response has a valid JSON body
+     pm.response.to.be.json; 
+     
+});
+
+
+pm.test("Test of success", function() {
+
+var jsonData = JSON.parse(responseBody);
+
+console.log(jsonData.result["execution-results"]);
+
+pm.expect(jsonData.type).to.eql("SUCCESS")
+   
+})
+
+pm.test("Test of Annual MPI", function() {
+
+var jsonData = JSON.parse(responseBody);
+
+var application = jsonData.result["execution-results"].results[0].value["com.redhat.bpms.example.pmi.MortgageApplication"];
+
+pm.expect(application.annualMIP).to.eql(45);
+
+});
+
+pm.test("Test of LTV", function() {
+
+var jsonData = JSON.parse(responseBody);
+
+var application = jsonData.result["execution-results"].results[0].value["com.redhat.bpms.example.pmi.MortgageApplication"];
+
+pm.expect(application.ltv).to.eql(0.8);
+
+});
+-----------------
