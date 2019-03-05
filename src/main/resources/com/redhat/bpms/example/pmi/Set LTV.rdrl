@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "Set LTV"
 	dialect "mvel"
-	salience 5
+	ruleflow-group "initialization"
 	when
 		mortgage : MortgageApplication( property : property, value : property.price, loan : baseLoanAmount)
 	then
