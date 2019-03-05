@@ -4,7 +4,7 @@ import java.lang.Number;
 
 rule "A program is needed"
 	dialect "mvel"
-	salience 10
+	ruleflow-group "validation"
 	when
 		MortgageApplication( program == null )
 	then
